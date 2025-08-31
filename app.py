@@ -15,6 +15,7 @@ def load_model():
         return None
 
 model = load_model()
+prediction = model.predict(input_data)[0]
 
 # -------------------------------
 # Streamlit App
@@ -70,3 +71,4 @@ if st.button("🔍 Predict"):
             st.success("💰 The model predicts this person earns **>50K/year**")
         else:
             st.info("👤 The model predicts this person earns **<=50K/year**")
+
