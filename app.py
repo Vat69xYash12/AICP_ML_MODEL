@@ -12,7 +12,8 @@ st.set_page_config(page_title="IncomeScope", page_icon="💰", layout="wide")
 # -------------------------------
 @st.cache_resource
 def load_model():
-    return joblib.load("adult_model.pkl")  # trained RF model
+    return joblib.load("adult_model.pkl")
+  # trained RF model
 
 model = load_model()
 
@@ -128,4 +129,5 @@ if submit:
 
     st.markdown("---")
     st.success(f"### Prediction Result: {salary_prediction}")
+
 
